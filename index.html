@@ -27,7 +27,7 @@
                     Lista della spesa
                 </h2>
                 <ul>
-                    <li v-for="toDoItem in toDoList" :class="!toDoList.done ? '' : 'line-through-text'">
+                    <li v-for="toDoItem in toDoList" @click="todoCheck" :class="!toDoList.done ? '' : 'line-through-text'">
                         {{ toDoItem.text }}
                         <span @click="removeElement(index)">
                             <i class="fa-solid fa-x"></i>

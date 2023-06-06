@@ -54,15 +54,7 @@ createApp({
 
     methods : {
 
-       /*
-        removeElement(indice){
-            if(indice >= this.toDoList.length || indice < 0){
-                console.warn('Attention please');
-            }else{
-                this.toDoList = this.toDoList.splice(indice, 1);
-            }
-        }*/
-        
+
         addNewElement(element){
             this.toDoList.push(element);
             this.newElement = {
@@ -70,7 +62,21 @@ createApp({
             };
         },
 
+        todoCheck(todoElement){
+            if(todoElement === false){
 
+            }else{
+                todoElement = !todoElement
+            }
+        },
+
+        removeElement(indice){
+            if(indice >= this.toDoList.length || indice < 0){
+                console.warn('Attention please');
+            }else{
+                this.toDoList.splice(indice, 1);
+            }
+        }
         
     },
 
