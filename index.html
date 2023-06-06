@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>vue-todolist</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Vue 3 -->
+        <script src="https://unpkg.com/vue@3"></script>
+
+        <div id="app">
+            <header>
+                <h1>
+                    Vue-todolist
+                </h1>
+            </header>
+
+
+            <div class="todo-list">
+                <h2>
+                    Lista della spesa
+                </h2>
+                <ul>
+                    <li v-for="toDoItem in toDoList">
+                        {{ toDoItem.text }}
+                    </li>        
+                </ul>
+                
+                <div class="action-bar">
+                    <div>
+                        <input type="text" v-model="(newElement)">
+                        <button class="button" @click="addNewElement(newElement)">
+                            Aggiungi
+                        </button>
+                    </div>           
+                </div>
+            </div>
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
