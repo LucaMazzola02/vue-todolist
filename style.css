@@ -29,8 +29,10 @@ header h1{
 }
 
 ul li{
-    margin-left: 1rem;
-    padding-left: 3rem;
+    list-style-type: circle;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid coral;
 }
 
 ul{
@@ -52,6 +54,10 @@ input{
 
 .line-through-text{
     text-decoration: line-through;
+}
+
+span{
+    margin-left: 3rem;
 }
 
 

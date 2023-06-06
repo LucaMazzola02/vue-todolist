@@ -22,35 +22,36 @@ createApp({
             toDoList : [
             {
                 text : 'Insalata',
-                done : 'false',
+                done : false,
             },
             {
                 text : 'Amuchina',
-                done : 'false',
+                done : false,
             },
             {
                 text : 'Dentifricio',
-                done : 'true',
+                done : false,
             },
             {
                 text : 'Shampoo',
-                done : 'false',
+                done : false,
             },
             {
                 text : 'Patatine',
-                done : 'true',
+                done : false,
             },{
                 text : 'Profitterol',
-                done : 'true',
+                done : false,
             },
             ],
 
-            newElement : '',
-        
-        
-        
+            newElement : {
+                text : '',
+                done : false,
+            },
         }
     },
+
     methods : {
 
        /* todoCheck(booleaners){
@@ -58,12 +59,24 @@ createApp({
                 this.booleaners
             }
 
-        },*/
+        },
 
+
+
+        removeElement(indice){
+            if(indice >= this.toDoList.length || indice < 0){
+                console.warn('Attention please');
+            }else{
+                this.toDoList = this.toDoList.splice(indice, 1);
+            }
+        }*/
+        
         addNewElement(element){
             this.toDoList.push(element);
-            this.newElement = '';
-        }
+            this.newElement = {
+                text : '',
+            };
+        },
 
 
         

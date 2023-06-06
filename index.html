@@ -29,12 +29,15 @@
                 <ul>
                     <li v-for="toDoItem in toDoList">
                         {{ toDoItem.text }}
+                        <span @click="removeElement(index)">
+                            <i class="fa-solid fa-x"></i>
+                        </span>
                     </li>        
                 </ul>
                 
                 <div class="action-bar">
                     <div>
-                        <input type="text" v-model="(newElement)">
+                        <input type="text" v-model="newElement.text">
                         <button class="button" @click="addNewElement(newElement)">
                             Aggiungi
                         </button>
@@ -43,26 +46,6 @@
             </div>
 
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         </div>
 
