@@ -54,15 +54,7 @@ createApp({
 
     methods : {
 
-       /* todoCheck(booleaners){
-            if(booleaners === false){
-                this.booleaners
-            }
-
-        },
-
-
-
+       /*
         removeElement(indice){
             if(indice >= this.toDoList.length || indice < 0){
                 console.warn('Attention please');
