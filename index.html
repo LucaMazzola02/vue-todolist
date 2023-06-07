@@ -27,9 +27,13 @@
                     Lista della spesa
                 </h2>
                 <ul>
-                    <li v-for="toDoItem in toDoList" @click="todoCheck" :class="!toDoList.done ? '' : 'line-through-text'">
-                        {{ toDoItem.text }}
-                        <span @click="removeElement(index)">
+                    <li v-for="(toDoItem, index) in toDoList" @click="todoCheck(index)" >
+
+                        <span class="todo-wrapper" :class="toDoItem.done ? 'line-through-text' : ''">
+                            {{ toDoItem.text }}
+                        </span>
+                        
+                        <span @click="removeElement(index)" >
                             <i class="fa-solid fa-x"></i>
                         </span>
                     </li>        
@@ -37,7 +41,7 @@
                 
                 <div class="action-bar">
                     <div>
-                        <input type="text" v-model="newElement.text">
+                        <input type="text" v-model="newElement.text" @keyup.enter="addNewElement(newElement)">
                         <button class="button" @click="addNewElement(newElement)">
                             Aggiungi
                         </button>

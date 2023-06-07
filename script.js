@@ -63,11 +63,8 @@ createApp({
         },
 
         todoCheck(todoElement){
-            if(todoElement === false){
-
-            }else{
-                todoElement = !todoElement
-            }
+                this.toDoList[todoElement].done = !this.toDoList[todoElement].done
+            
         },
 
         removeElement(indice){
